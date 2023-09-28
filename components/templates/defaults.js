@@ -1,32 +1,52 @@
 import Image from "next/image";
+import AnimatedCursor from "react-animated-cursor";
+import moduleSettings from '@/tailwind.config';
+import Link from "next/link";
 
-export default function DefaulTemplate({children})
+export default function DefaulTemplate({children, page = 'home'})
 {
+    const colorSetting = moduleSettings.theme.extend.colors;
+
     return (
     <section>
         <div className="grid min-h-[100vh] grid-cols-12">
-            <div className="col-span-3 bg-white">
+            <div className="col-span-3 border-r border-gray-300 bg-white">
                 <div className="text-center min-h-[90vh]">
                     <div className="image pt-[60px]">
                         <Image src={'/imgs/1.jpg'} width={150} height={150} className="rounded-full border-4 border-light_text mx-auto mb-4" alt="img"/>
                         <h3 className="block text-[30px] font-bold">Wikla Pandu</h3>
                     </div>
-                    <ul className="text-[18px] my-8 text-[#55527C] font-normal flex flex-col gap-y-[20px]">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Portfolio</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
+                    <ul className="navs-link">
+                        <li className={(page == 'home') && "active"}>
+                            <Link href="/">Home</Link>
+                        </li>
+                        <li className={(page == 'about') && 'active'}><Link href="/about">About</Link></li>
+                        <li className={(page == 'services') && 'active'}><Link href="/services">Services</Link></li>
+                        <li className={(page == 'portfolio') && 'active'}><Link href="/portfolio">Portfolio</Link></li>
+                        <li className={(page == 'blogs') && 'active'}><Link href="/blogs">Blogs</Link></li>
+                        <li className={(page == 'contact') && 'active'}><Link href="/contact">Contact</Link></li>
                     </ul>
                 </div>
             </div>
-            <div className="col-span-9 bg-primary">
-                <div className="p-5 md:max-w-[1250px] w-full px-[20px] mx-auto">
-                    {children}
-                </div>
+            <div className="col-span-9 max-h-[100vh] overflow-auto">
+                {children}
             </div>
         </div>
+        <AnimatedCursor
+        innerSize={8}
+        outerSize={35}
+        innerScale={1}
+        outerScale={2}
+        outerAlpha={0}
+        hasBlendMode={true}
+        innerStyle={{
+            backgroundColor: colorSetting.secondary
+          }}
+          outerStyle={{
+            border: '3px solid ' + colorSetting.secondary,
+          }}
+          showSystemCursor={true}
+        />
     </section>
     );
 }
