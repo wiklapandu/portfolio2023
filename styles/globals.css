@@ -34,6 +34,10 @@
     @apply inline-block border duration-500 ease-out py-[9px] px-[40px] rounded-[4px] text-[18px];
 }
 
+.btn-block {
+    @apply block border duration-500 ease-out py-[9px] px-[40px] rounded-[4px] text-[18px];
+}
+
 .btn-primary {
     @apply bg-dark hover:bg-transparent hover:text-dark border-dark text-white;
 }
@@ -44,6 +48,10 @@
 
 .card {
     @apply bg-white rounded-md hover:-translate-y-2 ease-in-out duration-300;
+}
+
+.card-2 {
+    @apply rounded-sm hover:-translate-y-2 ease-in-out duration-300 border border-gray-300;
 }
 
 .card-body {

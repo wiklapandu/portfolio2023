@@ -19,6 +19,19 @@ module.exports = {
         dark_text: '#130F49',
         dark_text_secondary: '#55527C',
         light_text: '#A5A6FF'
+      },
+      keyframes: {
+        galleryOpacity: {
+          '0%': {
+            opacity: '0%'
+          },
+          '100%': {
+            opacity: '100%'
+          }
+        }
+      },
+      animation: {
+        'galleryOpacity': 'galleryOpacity .5s ease-in-out'
       }
     },
   },
