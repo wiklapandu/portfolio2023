@@ -18,7 +18,7 @@ module.exports = {
         dark: '#130F49',
         dark_text: '#130F49',
         dark_text_secondary: '#55527C',
-        light_text: '#A5A6FF'
+        light_text: '#3dceaa'
       },
       keyframes: {
         galleryOpacity: {
@@ -28,10 +28,28 @@ module.exports = {
           '100%': {
             opacity: '100%'
           }
-        }
+        },
+        navbarSlideOpen: {
+          '0%': {
+            transform: 'translateX(-100vw)'
+          },
+          '100%': {
+            transform: 'translateX(0)'
+          }
+        },
+        navbarSlideClose: {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            transform: 'translateX(-100vw)',
+          }
+        },
       },
       animation: {
-        'galleryOpacity': 'galleryOpacity .5s ease-in-out'
+        'galleryOpacity': 'galleryOpacity .5s ease-in-out',
+        navbarSlideOpen: 'navbarSlideOpen .9s ease-in-out',
+        navbarSlideClose: 'navbarSlideClose .9s ease-in-out',
       }
     },
   },

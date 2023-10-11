@@ -27,7 +27,7 @@ export default function Services()
     }, []);
 
     return <>
-    <DefaulTemplate page="services">
+    <DefaulTemplate page="services" themeColor="white">
         <Section sectionType={"white " + inter}>
             <div className="flex items-center mb-4">
                 <div>

@@ -9,7 +9,7 @@ export default function ContactForm() {
   const [alert, setAlert]   = useState({});
 
   return (
-    <form className="md:w-[50%]" onSubmit={(event) => {
+    <form className="lg:w-[50%]" onSubmit={(event) => {
       event.preventDefault();
       SendContact({subject, email, content, name}, setAlert);
       if(alert?.status == 'success') {
@@ -35,7 +35,7 @@ export default function ContactForm() {
           onChange={(event) => setSubject(event.target.value)}
           value={subject}
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          placeholder="Insert Subject"
+          placeholder="Insert Subject..."
           required
         />
       </div>
@@ -52,7 +52,7 @@ export default function ContactForm() {
           onChange={(event) => setName(event.target.value)}
           value={name}
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          placeholder="name@flowbite.com"
+          placeholder="Insert your name / company..."
           required
         />
       </div>

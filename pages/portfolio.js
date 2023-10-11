@@ -28,7 +28,7 @@ export default function Portfolio()
     }, []);
 
     return <>
-    <DefaulTemplate page="portfolio">
+    <DefaulTemplate page="portfolio" themeColor="white">
         <Section sectionType={"white " + inter}>
             <div className="flex items-center mb-4">
                 <div>

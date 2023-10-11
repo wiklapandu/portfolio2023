@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Card ({imgSrc = '', title = '', desc = '', onClick, buttonText = 'Show Gallery', withIcon = true}) {
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in">
+        <div className="rounded overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in">
             <Image width={400} height={400} className="w-full" src={imgSrc} alt="Card Images" />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{title}</div>

@@ -25,7 +25,7 @@ export default function Blogs() {
 
   return (
     <>
-      <DefaulTemplate page="blogs">
+      <DefaulTemplate page="blogs" themeColor="white">
         <Section sectionType={"white " + inter}>
           <div className="flex items-center mb-4">
             <div>
@@ -38,7 +38,7 @@ export default function Blogs() {
               wiklapandu2503@gmail.com
             </span>
           </div>
-          <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             {blogs &&
               blogs.map((data, key) => {
                 const blog = data.attributes;

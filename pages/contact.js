@@ -5,7 +5,7 @@ import DefaulTemplate from "@/components/templates/defaults";
 export default function Contact()
 {
     return <>
-    <DefaulTemplate page="contact">
+    <DefaulTemplate page="contact" themeColor="white">
         <Section sectionType="white">
             <ContactForm/>
         </Section>

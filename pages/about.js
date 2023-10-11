@@ -1,19 +1,20 @@
 import Section from "@/components/section";
 import DefaulTemplate from "@/components/templates/defaults";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['greek'] })
 
 export default function About()
 {
-    return <DefaulTemplate page="about">
+    return <DefaulTemplate page="about" themeColor="white">
         <Section sectionType="white">
             <div className={"grid lg:grid-cols-12 gap-8 mb-[100px] " +  inter.className}>
                 <div className="col-span-5 text-dark">
                     <h5>- NICE TO MEET YOU!</h5>
                     <h1 className="text-[40px] font-bold mb-2">Wikla Pandu</h1>
                     <h3 className="text-[20px] text-dark mb-7">Web Developer & Back-end Developer</h3>
-                    <a href="#" className="btn btn-primary">Got a project</a>
+                    <Link href={'/contact'} className="btn btn-primary">Got a project</Link>
                 </div>
                 <div className="col-span-6 grid gap-[2rem]">
                     <p>Hello there! My name is Wikla Pandu. I am a Full-stack Developer & Backend Developer, and I{"'"}m very passionate and dedicated to my work.</p>
@@ -44,7 +45,7 @@ export default function About()
             </div>
             <div className="grid lg:grid-cols-3 gap-8">
                 <div className="text-center bg-primary py-[60px]">
-                    <span className="block font-bold text-[40px]">10+</span>
+                    <span className="block font-bold text-[40px]">3+</span>
                     <p className="text-[18px] font-medium">YEARS OF EXPERIENCES</p>
                 </div>
                 <div className="text-center bg-dark text-white py-[60px]">
