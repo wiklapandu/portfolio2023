@@ -16,7 +16,7 @@ export default function About()
                     <a href="#" className="btn btn-primary">Got a project</a>
                 </div>
                 <div className="col-span-6 grid gap-[2rem]">
-                    <p>Hello there! My name is Wikla Pandu. I am a Full-stack Developer & Backend Developer, and I'm very passionate and dedicated to my work.</p>
+                    <p>Hello there! My name is Wikla Pandu. I am a Full-stack Developer & Backend Developer, and I{"'"}m very passionate and dedicated to my work.</p>
                     <p>
                     With {"2+"} years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.
                     </p>
@@ -73,7 +73,7 @@ export default function About()
                         </div>
                         <h3 className="font-bold text-dark text-[18px] mb-4">Back end Developer</h3>
                         <p className="text-dark_text_secondary text-[18px] leading-[28px]">
-                        A backend developer is a software engineer who specializes in building and maintaining the server-side components of applications and websites. They work on databases, server logic, and APIs to ensure data processing, security, and performance, enabling seamless interaction between users and the application's frontend.
+                        A backend developer is a software engineer who specializes in building and maintaining the server-side components of applications and websites. They work on databases, server logic, and APIs to ensure data processing, security, and performance, enabling seamless interaction between users and the application{"'"}s frontend.
                         </p>
                     </div>
                 </div>
