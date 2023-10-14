@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import DefaulTemplate from "@/components/templates/defaults";
 import Section from "@/components/section";
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
+import moment from "moment";
 
 const inter = Inter({ subsets: ["greek"] });
 
@@ -19,13 +21,25 @@ export default function Home() {
             <div className="title text-[3.5rem] font-bold">
               <h1 className="leading-[3.5rem] text-dark_text">
                 Hi, I{"'"}m <span className="text-light_text">Wikla!</span>
-                <span className="block">Web Developer</span>
+                <span className="block">
+                  <TypeAnimation 
+                  sequence={[
+                    'Backend Developer',
+                    1000,
+                    'And',
+                    500,
+                    'Web Developer',
+                    1000,
+                  ]}
+                  cursor={true}
+                  />
+                </span>
                 <span className="block">Based in Jogja</span>
               </h1>
             </div>
             <p className="my-6 text-dark_text_secondary text-[18px] md:max-w-[400px]">
               I{"'"}m a Jogja, Indonesia based web developer & back{"‑"}end
-              developer with <span className="text-light_text">2+ years</span>{" "}
+              developer with <span className="text-light_text">{moment().diff(moment('2020'), 'years')}+ years</span>{" "}
               of experience
             </p>
             <div className="button-group flex gap-3 mb-[100px]">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react";
 import Drawer from "../drawer";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function DefaulTemplate({children, page = 'home', themeColor = 'primary'})
 {
@@ -25,7 +26,7 @@ export default function DefaulTemplate({children, page = 'home', themeColor = 'p
             </div>
             <ul className="navs-link">
                 <li className={(page == 'home') ? "active" : ''}>
-                    <Link href="/">Home</Link>
+                    <Link href={"/"}>Home</Link>
                 </li>
                 <li className={(page == 'about') ? 'active' : ''}><Link href="/about">About</Link></li>
                 <li className={(page == 'services') ? 'active' : ''}><Link href="/services">Services</Link></li>
@@ -38,7 +39,7 @@ export default function DefaulTemplate({children, page = 'home', themeColor = 'p
             <div className="md:col-span-3 md:block hidden border-r border-gray-300 bg-white">
                 <div className="text-center min-h-screen">
                     <div className="image pt-[60px]">
-                        <Image src={'/imgs/1.jpg'} width={150} height={150} className="rounded-full border-4 border-light_text mx-auto mb-4" alt="img"/>
+                        <Image src={'/imgs/profile.png'} width={150} height={150} className="rounded-full border-4 border-light_text mx-auto mb-4" alt="img"/>
                         <h3 className="block text-[30px] font-bold">Wikla Pandu</h3>
                     </div>
                     <ul className="navs-link">
@@ -76,6 +77,7 @@ export default function DefaulTemplate({children, page = 'home', themeColor = 'p
                 {children}
             </div>
         </div>
+        <ToastContainer position={toast.POSITION.BOTTOM_LEFT}/>
         <AnimatedCursor
         innerSize={8}
         outerSize={35}
@@ -84,10 +86,10 @@ export default function DefaulTemplate({children, page = 'home', themeColor = 'p
         outerAlpha={0}
         hasBlendMode={true}
         innerStyle={{
-            backgroundColor: colorSetting.secondary
+            backgroundColor: colorSetting.light_text
           }}
           outerStyle={{
-            border: '3px solid ' + colorSetting.secondary,
+            border: '3px solid ' + colorSetting.light_text,
           }}
           showSystemCursor={true}
         />

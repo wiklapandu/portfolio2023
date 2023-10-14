@@ -1,5 +1,6 @@
 import { SendContact } from "@/controllers/contact";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [subject, setSubject] = useState('');
@@ -11,7 +12,15 @@ export default function ContactForm() {
   return (
     <form className="lg:w-[50%]" onSubmit={(event) => {
       event.preventDefault();
-      SendContact({subject, email, content, name}, setAlert);
+      const sendMail = SendContact({subject, email, content, name}, setAlert);
+      toast.promise(
+        sendMail,
+        {
+          error: alert.message,
+          pending: '👌 loading....',
+          success: alert.message,
+        }
+      )
       if(alert?.status == 'success') {
         setSubject('')
         setEmail('')

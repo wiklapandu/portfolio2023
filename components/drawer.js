@@ -1,17 +1,15 @@
-import Image from "next/image";
-import { useState } from "react"
-
-export default function Drawer({children, className, isOpen, onClose})
+export default function Drawer({children, className = '', isOpen, onClose})
 {
+    const drawerFuncClass = isOpen ? 'animate-navbarSlideOpen translate-x-0' : 'animate-navbarSlideClose -translate-x-full';
     return (
         <>
-            <div className={"md:hidden w-[50vw] z-50 flex min-h-screen bg-white shadow-xl fixed top-0 left-0 " + (isOpen ? 'animate-navbarSlideOpen translate-x-0' : 'animate-navbarSlideClose -translate-x-full')}>
+            <div className={"md:hidden w-[50vw] z-50 flex min-h-screen bg-white shadow-xl fixed top-0 left-0 " + drawerFuncClass}>
                 <div className="w-2/3 mx-auto m-4">
                     <div className="flex justify-between items-end text-dark mb-12">
                         <div>
                             <h3 className="text-2xl font-medium">Menu</h3>
                         </div>
-                        <button type="button" className="text-2xl hover:scale-95" onClick={() => onClose(!isOpen)}>
+                        <button type="button" className={"text-2xl hover:scale-95"} onClick={() => onClose(!isOpen)}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width={24}
@@ -30,7 +28,7 @@ export default function Drawer({children, className, isOpen, onClose})
                     </div>
                 </div>
             </div>
-            <div className={(isOpen && "min-w-screen animate-galleryOpacity bg-black bg-opacity-50 absolute top-0")}></div>
+            <div className={isOpen ? "min-w-screen animate-galleryOpacity bg-black bg-opacity-50 absolute top-0" : ''}></div>
         </>
     )   
 }

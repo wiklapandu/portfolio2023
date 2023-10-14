@@ -4,6 +4,7 @@ const nextConfig = {
   env: {
     api_url: process.env.API_URL,
     url: process.env.URL,
+    TOKEN_PUBLIC: process.env.TOKEN_PUBLIC,
     email_host: process.env.EMAIL_HOST,
     email_port: process.env.EMAIL_PORT,
     email_user: process.env.EMAIL_USER,
